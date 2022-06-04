@@ -5,7 +5,6 @@ import { IContainer } from './types';
 const StyledContainer = styled.div<IContainer>`
   display: flex;
   flex-direction: column;
-  width: 100%;
   padding: 16px;
   ${({ flexRow }) => flexRow && `flex-direction: row;`}
   ${({ width }) => width && `width: ${width};`}
@@ -21,8 +20,7 @@ const StyledContainer = styled.div<IContainer>`
   ${({ justifyCenter }) => justifyCenter && `justify-content: center;`}
   ${({ spaceBetween }) => spaceBetween && `justify-content: space-between;`}
   ${({ margin }) => margin && `margin: ${margin};`}
-  ${({ backgroundColor }) =>
-    backgroundColor && `background-color: ${backgroundColor};`}
+  ${({ backgroundColor }) => backgroundColor && `background-color: ${backgroundColor};`}
   ${({ backgroundImage }) =>
     backgroundImage &&
     `
