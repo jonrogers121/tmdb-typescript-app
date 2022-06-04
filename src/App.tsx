@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './pages/Home';
 import './global.css';
+import Movie from './pages/Movie';
 
 /**
  * The starting page for your App
@@ -19,6 +20,10 @@ class App extends Component {
               <Routes>
                 <Route path={'/'} element={<Home />} />
                 <Route path={'/home'} element={<Home />} />
+                <Route path={'/movie'} element={<Movie />} />
+                <Route path="/movie" element={<Movie />}>
+                  <Route path=":movieId" element={<Movie />} />
+                </Route>
               </Routes>
             </section>
           </main>
