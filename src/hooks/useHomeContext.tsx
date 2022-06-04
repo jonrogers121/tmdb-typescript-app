@@ -1,15 +1,25 @@
-import { useState } from "react";
-import constate from "constate";
+import { useEffect, useState } from 'react';
+import constate from 'constate';
+import usePopularMovies from './usePopularMovies';
+import { IMovies } from '../types/movies';
 
 const useHome = () => {
-  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [movieData, setMovieData] = useState<IMovies[]>();
+  const { data, error, loading } = usePopularMovies();
+
+  useEffect(() => {
+    if (data) {
+      const { results } = data;
+      setMovieData(results);
+    }
+  }, [data]);
 
   return {
-    formSubmitted,
-    setFormSubmitted,
+    movieData,
+    error,
+    loading
   };
 };
 
-const [HomeProvider, useHomeContext] =
-  constate(useHome);
+const [HomeProvider, useHomeContext] = constate(useHome);
 export { HomeProvider, useHomeContext };
