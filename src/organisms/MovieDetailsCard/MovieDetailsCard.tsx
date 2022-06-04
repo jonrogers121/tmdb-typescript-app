@@ -9,7 +9,6 @@ import { IMovieDetailsCard } from './types';
 
 export const MovieDetailsCard = ({ dataTestId }: IMovieDetailsCard) => {
   const { movieDetails } = useMovieContext();
-  console.log(movieDetails);
   return (
     <Container
       data-testid={dataTestId}

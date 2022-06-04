@@ -24,7 +24,6 @@ const useMovie = ({ movieId }: IMovieContext) => {
       });
     }
   }, [data]);
-  console.log(data);
 
   return {
     movieDetails,

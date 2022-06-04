@@ -10,7 +10,6 @@ const useHome = () => {
   useEffect(() => {
     if (data) {
       const { results } = data;
-      console.log(results);
       setMovieData(results);
     }
   }, [data]);
