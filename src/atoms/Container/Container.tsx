@@ -29,7 +29,7 @@ const Container = ({
   noPadding,
   onClick,
   cursorPointer,
-  columnReverse,
+  columnReverse
 }: IContainer) => {
   return (
     <StyledContainer

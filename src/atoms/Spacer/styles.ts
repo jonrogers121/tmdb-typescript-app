@@ -5,8 +5,7 @@ import { ISpacer } from './types';
 const StyledSpacer = styled.div<ISpacer>`
   margin-bottom: ${({ height, mobile }) => height && !mobile && px2Rem(height)};
   @media (max-width: 460px) {
-    margin-bottom: ${({ height, mobile }) =>
-      height && mobile && px2Rem(height)};
+    margin-bottom: ${({ height, mobile }) => height && mobile && px2Rem(height)};
   }
 `;
 

@@ -14,7 +14,8 @@ export const MovieCard = ({ dataTestId, posterUrl, title, rating }: IMovieCard) 
       center
       padding={px2Rem(16)}
       height={px2Rem(400)}
-      cursorPointer>
+      cursorPointer
+    >
       <Spacer height={16} />
       <Container
         height={px2Rem(200)}

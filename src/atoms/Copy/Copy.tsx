@@ -1,15 +1,7 @@
 import { StyledCopy } from './styles';
 import { ICopy } from './types';
 
-const Copy = ({
-  children,
-  color,
-  fontSize,
-  dataTestId,
-  bold,
-  italic,
-  lineHeight,
-}: ICopy) => {
+const Copy = ({ children, color, fontSize, dataTestId, bold, italic, lineHeight }: ICopy) => {
   return (
     <StyledCopy
       color={color}

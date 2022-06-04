@@ -6,9 +6,9 @@ const BaseHeader = ({ level, children }: IHeader) => {
   return createElement(
     `h${level}`,
     {
-      'data-testid': 'header',
+      'data-testid': 'header'
     },
-    children,
+    children
   );
 };
 
@@ -19,7 +19,7 @@ const Header = ({
   fontSize,
   dataTestId,
   level,
-  subFontWeight,
+  subFontWeight
 }: IHeader) => {
   return (
     <BaseHeader level={level || 1}>

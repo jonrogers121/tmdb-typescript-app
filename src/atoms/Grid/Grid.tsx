@@ -9,7 +9,7 @@ export const Grid = ({
   columnsTablet,
   rows,
   rowGap,
-  columnGap,
+  columnGap
 }: IGrid) => {
   return (
     <StyledGrid
