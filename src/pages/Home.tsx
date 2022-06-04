@@ -1,8 +1,10 @@
 import React from 'react';
 import Card from '../components/Card';
 import dummyData from '../dummyData.json'; // To be replaced with your api response data
+import usePopularMovies from '../hooks/usePopularMovies';
 
 export const Home = () => {
+  console.log(usePopularMovies());
   return (
     <>
       <h1>Space X Ships</h1>
@@ -13,8 +15,7 @@ export const Home = () => {
           gridTemplateColumns: '1fr 1fr 1fr',
           rowGap: '10px',
           columnGap: '20px'
-        }}
-      >
+        }}>
         <Card
           image={dummyData.image}
           name={dummyData.name}
