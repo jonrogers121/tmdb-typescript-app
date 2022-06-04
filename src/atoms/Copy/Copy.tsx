@@ -9,8 +9,7 @@ const Copy = ({ children, color, fontSize, dataTestId, bold, italic, lineHeight 
       data-testid={dataTestId}
       bold={bold}
       italic={italic}
-      lineHeight={lineHeight}
-    >
+      lineHeight={lineHeight}>
       {children}
     </StyledCopy>
   );

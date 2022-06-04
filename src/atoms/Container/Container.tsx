@@ -59,8 +59,7 @@ const Container = ({
       noPadding={noPadding}
       onClick={onClick}
       cursorPointer={cursorPointer}
-      columnReverse={columnReverse}
-    >
+      columnReverse={columnReverse}>
       {children}
     </StyledContainer>
   );
