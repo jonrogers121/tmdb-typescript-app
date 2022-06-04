@@ -1,18 +1,33 @@
 import { useEffect, useState } from 'react';
 import constate from 'constate';
 import { getMovieIdFromPathname } from '../utils/getMovieIdFromPathname';
+import useMovieDetails from './useMovieDetails';
+import { IMovies } from '../types/movies';
 
-const useMovie = () => {
-  const [movieId, setMovieId] = useState<string>();
+interface IMovieContext {
+  movieId: string;
+}
+
+const useMovie = ({ movieId }: IMovieContext) => {
+  const { data, error, loading } = useMovieDetails(movieId);
+  const [movieDetails, setMovieDetails] = useState<any>();
+
   useEffect(() => {
-    const url = window?.location?.pathname;
-    setMovieId(getMovieIdFromPathname(url));
-  }, []);
-
-  console.log(movieId);
+    if (data) {
+      const { title, overview, poster_path, vote_average } = data;
+      setMovieDetails({
+        title,
+        overview,
+        poster: poster_path,
+        rating: vote_average
+      });
+    }
+  }, [data]);
 
   return {
-    movieId
+    movieDetails,
+    loading,
+    error
   };
 };
 
