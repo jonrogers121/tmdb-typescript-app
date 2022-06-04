@@ -14,6 +14,7 @@ export const ResultsGrid = ({ dataTestId, items }: IResultsGrid) => {
               posterUrl={poster_path}
               rating={vote_average}
               dataTestId={`movieCard-${i}`}
+              movieId={id}
             />
           </div>
         ))}

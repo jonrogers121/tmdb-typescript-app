@@ -3,4 +3,5 @@ export interface IMovieCard {
   title: string;
   posterUrl: string;
   rating: number;
+  movieId: number;
 }

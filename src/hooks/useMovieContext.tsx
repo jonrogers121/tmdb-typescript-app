@@ -1,15 +1,20 @@
-import { useState } from "react";
-import constate from "constate";
+import { useEffect, useState } from 'react';
+import constate from 'constate';
+import { getMovieIdFromPathname } from '../utils/getMovieIdFromPathname';
 
 const useMovie = () => {
-  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [movieId, setMovieId] = useState<string>();
+  useEffect(() => {
+    const url = window?.location?.pathname;
+    setMovieId(getMovieIdFromPathname(url));
+  }, []);
+
+  console.log(movieId);
 
   return {
-    formSubmitted,
-    setFormSubmitted,
+    movieId
   };
 };
 
-const [MovieProvider, useMovieContext] =
-  constate(useMovie);
+const [MovieProvider, useMovieContext] = constate(useMovie);
 export { MovieProvider, useMovieContext };
