@@ -1,0 +1,32 @@
+---
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  unit-tests:
+    name: 'Unit Tests'
+    runs-on: ubuntu-latest
+    if: ${{ github.actor != 'dependabot[bot]' || github.ref == 'refs/heads/main' }}
+    timeout-minutes: 10
+    steps:
+      - name: 'Frontend: Checkout'
+        uses: actions/checkout@v2
+
+      - name: 'Frontend: Setup'
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+          cache: yarn
+
+      - name: 'Frontend: Install dependencies'
+        run: yarn install --immutable
+        shell: bash
+
+      - name: 'esLint'
+        run: yarn lint
+        shell: bash
