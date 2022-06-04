@@ -14,15 +14,17 @@ const useMovie = ({ movieId }: IMovieContext) => {
 
   useEffect(() => {
     if (data) {
-      const { title, overview, poster_path, vote_average } = data;
+      const { title, overview, poster_path, vote_average, backdrop_path } = data;
       setMovieDetails({
         title,
         overview,
-        poster: poster_path,
-        rating: vote_average
+        poster: `http://image.tmdb.org/t/p/w185${poster_path}`,
+        rating: vote_average,
+        posterBackdrop: `http://image.tmdb.org/t/p/w1280${backdrop_path}`
       });
     }
   }, [data]);
+  console.log(data);
 
   return {
     movieDetails,
