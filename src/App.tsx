@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import './global.css';
 import Movie from './pages/Movie';
 import Search from './pages/Search';
+import NavBar from './organisms/NavBar';
 
 /**
  * The starting page for your App
@@ -15,7 +16,7 @@ class App extends Component {
     return (
       <>
         <BrowserRouter>
-          <Header />
+          <NavBar />
           <main>
             <section>
               <Routes>
