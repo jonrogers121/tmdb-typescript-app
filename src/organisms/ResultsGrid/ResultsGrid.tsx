@@ -6,8 +6,8 @@ export const ResultsGrid = ({ dataTestId, items }: IResultsGrid) => {
   return (
     <StyledResultsGrid data-testid={dataTestId}>
       <Grid columns={3} columnsTablet={2} columnsMobile={1}>
-        {items?.map(({ original_title }) => (
-          <div>{original_title}</div>
+        {items?.map(({ original_title, id }) => (
+          <div key={id}>{original_title}</div>
         ))}
       </Grid>
     </StyledResultsGrid>
