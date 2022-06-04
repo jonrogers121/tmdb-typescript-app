@@ -8,6 +8,7 @@ const StyledButton = styled.button`
   background-color: ${primaryColors.c01};
   color: ${primaryColors.w01};
   padding: 0 ${px2Rem(16)};
+  cursor: pointer;
 `;
 
 export { StyledButton };
