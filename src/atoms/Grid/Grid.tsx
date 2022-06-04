@@ -19,7 +19,8 @@ export const Grid = ({
       columnsTablet={columnsTablet}
       rows={rows}
       rowGap={rowGap}
-      columnGap={columnGap}>
+      columnGap={columnGap}
+    >
       {children}
     </StyledGrid>
   );

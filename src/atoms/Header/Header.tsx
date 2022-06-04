@@ -28,7 +28,8 @@ const Header = ({
         subColor={subColor}
         fontSize={fontSize}
         data-testid={dataTestId}
-        subFontWeight={subFontWeight}>
+        subFontWeight={subFontWeight}
+      >
         {children}
       </StyledHeaderContent>
     </BaseHeader>
