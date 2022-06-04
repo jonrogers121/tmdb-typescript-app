@@ -1,5 +1,13 @@
+import { px2Rem } from './../../helpers/px2Rem';
+import { primaryColors } from './../../variables/colors';
 import styled from 'styled-components';
 
-const StyledButton = styled.div``;
+const StyledButton = styled.button`
+  height: 40px;
+  border: 'none';
+  background-color: ${primaryColors.c01};
+  color: ${primaryColors.w01};
+  padding: 0 ${px2Rem(16)};
+`;
 
 export { StyledButton };
