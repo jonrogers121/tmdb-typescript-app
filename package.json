@@ -6,10 +6,10 @@
   "scripts": {
     "webpack": "webpack",
     "start": "webpack serve",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "test:e2e": "playwright test"
   },
   "author": "",
   "license": "ISC",
@@ -32,6 +32,7 @@
     "@babel/preset-env": "^7.16.8",
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
+    "@playwright/test": "^1.22.2",
     "@typescript-eslint/eslint-plugin": "^5.27.0",
     "@typescript-eslint/parser": "^5.27.0",
     "babel-loader": "^8.2.3",
