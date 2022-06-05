@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom';
-import TextInput from '../../atoms/TextInput';
 import logo from '../../assets/tmdlogo.png';
-import Button from '../../atoms/Button';
 import SearchForm from '../../molecules/SearchForm';
 import Container from '../../atoms/Container';
 import Grid from '../../atoms/Grid';

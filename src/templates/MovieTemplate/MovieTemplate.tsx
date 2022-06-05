@@ -11,6 +11,7 @@ export const MovieTemplate = ({ dataTestId }: IMovieTemplate) => {
 
   if (error) return <ErrorComponent />;
   if (loading) return <LoadingComponent />;
+
   return (
     <StyledMovieTemplate data-testid={dataTestId}>
       <Layout pageHeader="Movie details">

@@ -9,6 +9,7 @@ interface ISearchContext {
 
 const useSearch = ({ searchTerm }: ISearchContext) => {
   const [movieData, setMovieData] = useState<IMovies[]>();
+  const [noResults, setNoResults] = useState<boolean>(false);
   const { data, error, loading } = useSearchQuery(searchTerm);
 
   useEffect(() => {
@@ -18,11 +19,16 @@ const useSearch = ({ searchTerm }: ISearchContext) => {
     }
   }, [data]);
 
+  useEffect(() => {
+    setNoResults(!movieData?.length);
+  }, [movieData]);
+
   return {
     searchTerm,
     movieData,
     error,
-    loading
+    loading,
+    noResults
   };
 };
 
