@@ -20,7 +20,9 @@ const useSearch = ({ searchTerm }: ISearchContext) => {
 
   return {
     searchTerm,
-    movieData
+    movieData,
+    error,
+    loading
   };
 };
 
