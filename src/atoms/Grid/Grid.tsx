@@ -9,7 +9,8 @@ export const Grid = ({
   columnsTablet,
   rows,
   rowGap,
-  columnGap
+  columnGap,
+  templateColumns
 }: IGrid) => {
   return (
     <StyledGrid
@@ -20,7 +21,7 @@ export const Grid = ({
       rows={rows}
       rowGap={rowGap}
       columnGap={columnGap}
-    >
+      templateColumns={templateColumns}>
       {children}
     </StyledGrid>
   );
