@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '../../atoms/Button';
 import Grid from '../../atoms/Grid';
@@ -10,7 +10,7 @@ import { ISearchForm } from './types';
 export const SearchForm = ({ dataTestId }: ISearchForm) => {
   const [searchTerm, setSearchTerm] = useState<string>();
   const navigate = useNavigate();
-  const handleSetInput = (e: any) => {
+  const handleSetInput = (e: ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e?.target?.value);
   };
   const handleSubmit = () => {

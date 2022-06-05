@@ -1,4 +1,6 @@
+import { ChangeEvent } from 'react';
+
 export interface ITextInput {
   dataTestId?: string;
-  onChange: (e: any) => void;
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 }
