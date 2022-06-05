@@ -7,6 +7,7 @@ export interface IStyledGrid {
   rows?: number;
   rowGap?: number;
   columnGap?: number;
+  templateColumns?: string;
 }
 export interface IGrid extends IStyledGrid {
   dataTestId?: string;

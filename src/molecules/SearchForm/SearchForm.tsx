@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Button from '../../atoms/Button';
 import Grid from '../../atoms/Grid';
 import TextInput from '../../atoms/TextInput';
+import { px2Rem } from '../../helpers/px2Rem';
 import { StyledSearchForm } from './styles';
 import { ISearchForm } from './types';
 
@@ -21,7 +22,7 @@ export const SearchForm = ({ dataTestId }: ISearchForm) => {
   };
   return (
     <StyledSearchForm data-testid={dataTestId}>
-      <Grid columns={2}>
+      <Grid columns={2} columnGap={24}>
         <TextInput onChange={handleSetInput} />
         <Button onClick={handleSubmit}>Find Movies</Button>
       </Grid>
