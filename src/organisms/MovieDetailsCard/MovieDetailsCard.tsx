@@ -29,10 +29,12 @@ export const MovieDetailsCard = ({ dataTestId }: IMovieDetailsCard) => {
             backgroundImagePosition="50%"
           />
           <Container>
-            <Header level={3} color={primaryColors.w01}>
+            <Header level={3} color={primaryColors.w01} dataTestId="movie-details-header">
               {movieDetails?.title}
             </Header>
-            <Copy color={primaryColors.w01}>{movieDetails?.overview}</Copy>
+            <Copy color={primaryColors.w01} dataTestId="movie-details-overview">
+              {movieDetails?.overview}
+            </Copy>
           </Container>
         </Grid>
       </Container>

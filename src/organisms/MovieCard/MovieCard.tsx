@@ -16,8 +16,7 @@ export const MovieCard = ({ dataTestId, posterUrl, title, rating, movieId }: IMo
         center
         padding={px2Rem(16)}
         height={px2Rem(400)}
-        cursorPointer
-      >
+        cursorPointer>
         <Spacer height={16} />
         <Container
           height={px2Rem(200)}
@@ -29,7 +28,7 @@ export const MovieCard = ({ dataTestId, posterUrl, title, rating, movieId }: IMo
         <Spacer height={16} />
         <Copy>Viewer rating: {rating}</Copy>
         <Spacer height={16} />
-        <Header level={4} color={primaryColors.c01}>
+        <Header level={4} color={primaryColors.c01} dataTestId={`${dataTestId}-header`}>
           {title}
         </Header>
         <Spacer height={16} />
