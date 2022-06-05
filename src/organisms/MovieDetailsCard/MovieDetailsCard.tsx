@@ -20,7 +20,8 @@ export const MovieDetailsCard = ({ dataTestId }: IMovieDetailsCard) => {
       styles={{
         borderRadius: px2Rem(10)
       }}
-      height="70vh">
+      height="70vh"
+    >
       <Container backgroundColor={primaryColors.c01} boxShadow>
         <Grid columns={2} columnsMobile={1}>
           <Container height={px2Rem(230)} backgroundImage={movieDetails?.poster} />

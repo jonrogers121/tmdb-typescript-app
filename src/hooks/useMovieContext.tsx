@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import constate from 'constate';
-import { getMovieIdFromPathname } from '../utils/getMovieIdFromPathname';
 import useMovieDetails from './useMovieDetails';
 import { IMovies } from '../types/movies';
 

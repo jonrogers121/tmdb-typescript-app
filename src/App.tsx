@@ -4,6 +4,8 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import './global.css';
 import Movie from './pages/Movie';
+import Search from './pages/Search';
+import NavBar from './organisms/NavBar';
 
 /**
  * The starting page for your App
@@ -14,7 +16,7 @@ class App extends Component {
     return (
       <>
         <BrowserRouter>
-          <Header />
+          <NavBar />
           <main>
             <section>
               <Routes>
@@ -23,6 +25,9 @@ class App extends Component {
                 <Route path={'/movie'} element={<Movie />} />
                 <Route path="/movie" element={<Movie />}>
                   <Route path=":movieId" element={<Movie />} />
+                </Route>
+                <Route path="/search" element={<Search />}>
+                  <Route path=":searchTerm" element={<Search />} />
                 </Route>
               </Routes>
             </section>

@@ -9,14 +9,15 @@ import { IMovieCard } from './types';
 
 export const MovieCard = ({ dataTestId, posterUrl, title, rating, movieId }: IMovieCard) => {
   return (
-    <Link to={`movie/${movieId}`}>
+    <Link to={`/movie/${movieId}`}>
       <Container
         dataTestId={dataTestId}
         boxShadow
         center
         padding={px2Rem(16)}
         height={px2Rem(400)}
-        cursorPointer>
+        cursorPointer
+      >
         <Spacer height={16} />
         <Container
           height={px2Rem(200)}
