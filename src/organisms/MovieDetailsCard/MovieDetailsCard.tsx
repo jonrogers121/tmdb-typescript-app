@@ -21,7 +21,13 @@ export const MovieDetailsCard = ({ dataTestId }: IMovieDetailsCard) => {
         borderRadius: px2Rem(10)
       }}
       height="70vh">
-      <Container backgroundColor={primaryColors.c01} boxShadow>
+      <Container
+        backgroundColor={primaryColors.c01}
+        boxShadow
+        styles={{
+          maxHeight: '60vh',
+          overflow: 'scroll'
+        }}>
         <Grid columns={2} columnsMobile={1}>
           <Container
             height={px2Rem(230)}
