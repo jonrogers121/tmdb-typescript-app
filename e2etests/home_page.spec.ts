@@ -12,11 +12,7 @@ test('it displays the front page with header, and render movie cards', async ({ 
 
 test('it opens a movie details page when the related movie card is clicked', async ({ page }) => {
   await page.goto('http://localhost:8080/');
-  const movieCard01 = page.locator('data-test-id=movieCard-0');
-  await expect(movieCard01).toBeDefined();
-
-  await page.locator('data-test-id=movieCard-0-header').click();
-
+  await page.locator('[data-testid="movieCard-0"] div').nth(1).click();
   const movieDetailsHeader = page.locator('data-test-id=movie-details-header');
   const movieDetailsOverview = page.locator('data-test-id=movie-details-overview');
   await expect(movieDetailsHeader).toBeDefined();
