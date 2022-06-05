@@ -11,7 +11,7 @@ export const Header = () => {
         <Container>
           <Grid columns={2} templateColumns="30% 70%" columnsMobile={1}>
             <Link to="/">
-              <img src={logo} alt="logo" height={60} />
+              <img src={logo} alt="logo" height={60} width="auto" />
             </Link>
             <SearchForm />
           </Grid>

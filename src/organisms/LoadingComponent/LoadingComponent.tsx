@@ -8,7 +8,7 @@ export const LoadingComponent = ({ dataTestId }: ILoadingComponent) => {
   return (
     <Container data-testid={dataTestId} center width="100%" height="70vh">
       <Container>
-        <img src={loading} alt="warning triangle" height={200} />
+        <img src={loading} alt="warning triangle" height={200} width="auto" />
       </Container>
       <Container>
         <Copy color={uiStateColors.success} fontSize={22}>

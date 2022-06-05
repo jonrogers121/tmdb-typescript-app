@@ -8,7 +8,7 @@ export const ErrorComponent = ({ dataTestId }: IErrorComponent) => {
   return (
     <Container data-testid={dataTestId} center width="100%" height="70vh">
       <Container>
-        <img src={warning} alt="warning triangle" height={200} />
+        <img src={warning} alt="warning triangle" height={200} width="auto" />
       </Container>
       <Container>
         <Copy color={uiStateColors.error} fontSize={22}>
